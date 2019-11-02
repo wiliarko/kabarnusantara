@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "788420029615",
+    "firebase_url": "https://kabar-nusantara.firebaseio.com",
+    "project_id": "kabar-nusantara",
+    "storage_bucket": "kabar-nusantara.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788420029615:android:24a0cf7ff0a42cc150785a",
+        "android_client_info": {
+          "package_name": "com.kabar.nusantara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788420029615-c9l14sca74n83gf072q52ub8to52kch5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVyegFVvgZm_o-9Bn7woUGQikQOjBhIhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788420029615-c9l14sca74n83gf072q52ub8to52kch5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
