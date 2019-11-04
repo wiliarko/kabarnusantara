@@ -9,7 +9,12 @@ import android.webkit.WebViewClient
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
+import com.google.gson.Gson
+import com.kabar.nusantara.network.APIClient
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONObject
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     var token_fcm=""
@@ -26,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                     return@OnCompleteListener
                 }
                 token_fcm = task.result?.token.toString()
+                initData(token_fcm)
                 println(token_fcm)
             })
 
@@ -36,6 +42,22 @@ class MainActivity : AppCompatActivity() {
                 loading.visibility = View.GONE
             }
         }
+    }
+
+    fun initData(token: String){
+        APIClient().services.registrasi(token).enqueue(object : Callback<String> {
+            override fun onResponse(call: retrofit2.Call<String>, response: Response<String>) {
+                println(response.body())
+//                if(response.body() =="berhasil") {
+//                    println("berhasil")
+//                }else{
+//                    println("berhasil")
+//                }
+            }
+            override fun onFailure(call: retrofit2.Call<String>, t: Throwable) {
+                println("Network failur "+ t)
+            }
+        })
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
@@ -71,6 +93,12 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        navigation.selectedItemId = R.id.navigation_home
+        val link = intent.getStringExtra("link") ?:"default"
+        println("link "+link)
+        if(link=="default"){
+            navigation.selectedItemId = R.id.navigation_home
+        }else{
+            webview.loadUrl(link)
+        }
     }
 }
