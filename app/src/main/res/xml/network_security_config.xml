@@ -3,6 +3,7 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">209.97.160.22</domain>
         <domain includeSubdomains="true">167.71.205.175</domain>
+        <domain includeSubdomains="true">kabarnusantara.co.id</domain>
         <domain includeSubdomains="true">192.168.43.185</domain>
     </domain-config>
 </network-security-config>

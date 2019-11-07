@@ -80,15 +80,15 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.navigation_kontribusi-> {
                     loading.visibility = View.VISIBLE
-                    webview.loadUrl("https://www.kabarnusantara.co.id/p/kirim-berita-ke-kabar-nusantara.html")
+                    webview.loadUrl("http://redaksi.kabarnusantara.co.id/kontribusi")
                 }
                 R.id.navigation_event-> {
                     loading.visibility = View.VISIBLE
-                    webview.loadUrl("https://www.kabarnusantara.co.id/#PopularPosts1")
+                    webview.loadUrl("http://redaksi.kabarnusantara.co.id/event")
                 }
                 R.id.navigation_redaksi-> {
                     loading.visibility = View.VISIBLE
-                    webview.loadUrl("https://www.kabarnusantara.co.id/search/label/Label2?max-results=10")
+                    webview.loadUrl("http://redaksi.kabarnusantara.co.id/redaksi")
                 }
             }
             true

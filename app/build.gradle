@@ -15,7 +15,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", "\"http://167.71.205.175/kabarnusantara/\""
+        buildConfigField "String", "BASE_URL", "\"http://redaksi.kabarnusantara.co.id/push/\""
     }
     buildTypes {
         release {
